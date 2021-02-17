@@ -23,35 +23,72 @@
             "patterns": [
                 {
                     "name": "keyword.info.webimblaze",
-                    "match": "^(step|desc|section|url)\\b"
+                    "match": "^(step|desc|section|include|repeat)\\b"
                 },
                 {
                     "name": "keyword.control.webimblaze",
-                    "match": "^(autoretry|echo|getallhrefs|getallsrcs|formatjson|sleep|retry|url|postbody|posttype|method)\\b"
+                    "match": "^(addheader|autoretry|checkpoint|decodequotedprintable|decodesmtp|dumpjson|errormessage|file|firstlooponly|formatjson|formatxml|getallhrefs|getallsrcs|getbackgroundimages|include|lastlooponly|logastext|logresponseasfile|maxredirect|method|posttype|postbody|readfile|readsharedvar|removecookie|restartbrowser|restartbrowseronfail|retry|runif|runon|section|setcookie|sleep|url|useragent|verifytext|writesharedvar|echo)\\b"
+                },
+                {
+                    "name": "keyword.prefix.webimblaze",
+                    "match": "^(shell|selenium)[^:]*"
+                },
+                {
+                    "name": "keyword.selenium.helper.webimblaze",
+                    "match": "\\b(_check_element_within_pixels|_clear_and_send_keys|_click|_click_after|_click_before|_get_element|_keys_to_element|_keys_to_element_after|_keys_to_element_before|_move_to|_scroll_to|_set_dropdown|_switch_to_window|_wait_for_text_present|_wait_for_text_visible|_wait_not_visible|_wait_visible)\\b"
+                },
+                {
+                    "name": "keyword.selenium.remote.driver.webimblaze",
+                    "match": "\\b(get_all_cookies|get_current_url|get_body_text|get_page_source|get_user_agent|find_element|send_keys|click)\\b"
                 },
                 {
                     "name": "invalid.illegal.warning.webimblaze",
-                    "match": "^(ignoresmartassertions)\\b"
+                    "match": "^(abort|autocontrolleronly|commandonerror|commandonfail|donotrunon|gotostep|id|ignoreautoassertions|ignoreautoretry|ignorehttpresponsecode|ignoresmartassertions)\\b"
+                },
+                {
+                    "name": "storage.delimiter.webimblaze",
+                    "match": "(\\|\\|\\||\\|\\|\\|)"
                 },
                 {
                     "name": "storage.webimblaze",
-                    "match": "^(var)[^:]*"
+                    "match": "^(eval|var)[^:]*"
                 },
                 {
                     "name": "support.type.exception.webimblaze",
-                    "match": "^(assertcount|verifypositive|verifynegative|verifyresponsecode)[^:]*"
+                    "match": "^(assertcount|searchimage|verifypositive|verifynegative|verifyresponsecode|verifyresponsetime)[^:]*"
+                },
+                {
+                    "name": "variable.reserved.webimblaze",
+                    "match": "\\b(ALPHA|ALPHANUMERIC|AMPERSAND|BASEURL|BASEURL1|BASEURL2|CONCURRENCY|COUNTER|CWD|DATA|DATE|DATE:::|DATETIME|DAY|DAYTEXT|ELAPSED_MINUTES|ELAPSED_SECONDS|EPOCHSECONDS|EPOCHSPLIT|FORMATDATETIME|HH|HOSTNAME|JUMPBACKS|LENGTH|LESSTHAN|MM|MONTH|MONTHTEXT|NAME|NOW|NUMERIC|OPT_PROXY|OUTPUT|RANDOM|RETRY|SINGLEQUOTE|SS|STARTTIME|TESTFILENAME|TESTNUM|TESTSTEPTIME|TIMESTAMP|WEEKOFMONTH|YEAR|YY)\\b"
                 },
                 {
                     "name": "variable.webimblaze",
-                    "match": "^(parseresponse|parsematch)[^:]*"
+                    "match": "^(parseresponse|parsematch|redact)[^:]*"
+                },
+                {
+                    "name": "variable.special.webimblaze",
+                    "match": "\\s(delete|put|application/json|application/soap\\+xml|application/x-www-form-urlencoded|multipart/form-data|text/xml|\\$driver|fail fast!|file=>|->get)\\b"
+                },
+                {
+                    "name": "variable.extra.special.webimblaze",
+                    "match": "(->get)\\b"
                 }
             ]
         },
         "strings": {
-            "name": "string.triple.angle.webimblaze",
-            "begin": "<<<",
-            "end": ">>>"
-        },
+            "patterns": [
+                {
+                    "name": "string.triple.angle.webimblaze",
+                    "begin": " <<<",
+                    "end": ">>>"
+                },
+                {
+                    "name": "string.triple.slash.webimblaze",
+                    "begin": " ///",
+                    "end": "///"
+                }
+            ]
+        }, 
         "block-comments": {
             "name": "comment.block.webimblaze",
             "begin": "--=",
@@ -59,7 +96,7 @@
         },
         "single-line-comment": {
             "name": "comment.single.webimblaze",
-            "match": "(#).*$\\n?"
+            "match": "^\\s*(#).*$\\n?"
         },
         "variables": {
             "name": "storage.webimblaze",

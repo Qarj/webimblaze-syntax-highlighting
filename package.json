@@ -10,16 +10,25 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "webimblaze",
-            "aliases": ["WebImblaze", "webimblaze"],
-            "extensions": [".test"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "webimblaze",
-            "scopeName": "source.webimblaze",
-            "path": "./syntaxes/webimblaze.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "webimblaze",
+                "aliases": [
+                    "WebImblaze",
+                    "webimblaze"
+                ],
+                "extensions": [
+                    ".test"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "webimblaze",
+                "scopeName": "source.webimblaze",
+                "path": "./syntaxes/webimblaze.tmLanguage.json"
+            }
+        ]
     }
 }

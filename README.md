@@ -30,7 +30,7 @@ postbody
 
 ### 0.1.0
 
-Still being written.
+Completed first draft.
 
 # development-notes
 
