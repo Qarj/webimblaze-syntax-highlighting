@@ -28,14 +28,13 @@ postbody
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 0.1.0
 
 Still being written.
 
 # development-notes
 
+https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide
 https://code.visualstudio.com/api/get-started/your-first-extension
 https://fossies.org/linux/vscode/extensions/json/syntaxes/JSON.tmLanguage.json
 
