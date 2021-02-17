@@ -1,0 +1,25 @@
+{
+    "name": "webimblaze-syntax-highlighting",
+    "displayName": "WebImblaze Syntax Highlighting",
+    "description": "VSCode syntax highlighting for WebImblaze .test files",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.53.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "webimblaze",
+            "aliases": ["WebImblaze", "webimblaze"],
+            "extensions": [".test"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "webimblaze",
+            "scopeName": "source.webimblaze",
+            "path": "./syntaxes/webimblaze.tmLanguage.json"
+        }]
+    }
+}

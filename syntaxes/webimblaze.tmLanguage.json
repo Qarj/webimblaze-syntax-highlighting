@@ -1,0 +1,43 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "WebImblaze",
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#block-comments"
+        },
+        {
+            "include": "#single-line-comment"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.webimblaze",
+                    "match": "\\b(step|desc|section|url)\\b"
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.triple.angle.webimblaze",
+            "begin": "<<<",
+            "end": ">>>"
+        },
+        "block-comments": {
+            "name": "comment.block.webimblaze",
+            "begin": "--=",
+            "end": "=--"
+        },
+        "single-line-comment": {
+            "name": "comment.single.webimblaze",
+            "match": "(#).*$\\n?"
+        }
+    },
+    "scopeName": "source.webimblaze"
+}
