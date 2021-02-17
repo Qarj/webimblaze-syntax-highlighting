@@ -3,7 +3,7 @@
     "name": "WebImblaze",
     "patterns": [
         {
-            "include": "#others"
+            "include": "#keywords"
         },
         {
             "include": "#strings"
@@ -13,12 +13,39 @@
         },
         {
             "include": "#single-line-comment"
+        },
+        {
+            "include": "#variables"
         }
     ],
     "repository": {
-        "others": {
-            "name": "parameter.informational.webimblaze",
-            "match": "(step)"
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.info.webimblaze",
+                    "match": "^(step|desc|section|url)\\b"
+                },
+                {
+                    "name": "keyword.control.webimblaze",
+                    "match": "^(autoretry|echo|getallhrefs|getallsrcs|formatjson|sleep|retry|url|postbody|posttype|method)\\b"
+                },
+                {
+                    "name": "invalid.illegal.warning.webimblaze",
+                    "match": "^(ignoresmartassertions)\\b"
+                },
+                {
+                    "name": "storage.webimblaze",
+                    "match": "^(var)[^:]*"
+                },
+                {
+                    "name": "support.type.exception.webimblaze",
+                    "match": "^(assertcount|verifypositive|verifynegative|verifyresponsecode)[^:]*"
+                },
+                {
+                    "name": "variable.webimblaze",
+                    "match": "^(parseresponse|parsematch)[^:]*"
+                }
+            ]
         },
         "strings": {
             "name": "string.triple.angle.webimblaze",
@@ -33,6 +60,11 @@
         "single-line-comment": {
             "name": "comment.single.webimblaze",
             "match": "(#).*$\\n?"
+        },
+        "variables": {
+            "name": "storage.webimblaze",
+            "begin": "{",
+            "end": "}"
         }
     },
     "scopeName": "source.webimblaze"
