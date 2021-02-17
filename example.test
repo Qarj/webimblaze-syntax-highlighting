@@ -1,0 +1,32 @@
+--=
+    This is a multiline comment.
+=--
+
+#
+# Single line comments
+#
+
+step:                           Info - Login as member
+
+step:                           Sumbit username and password for new account
+varACCOUNT:                     sam@example.com
+url:                            https://example.com/account/new
+posttype:                       application/x-www-form-urlencoded
+method:                         PUT
+postbody:<<<:                   <<<
+{
+    username: "{ACCOUNT}",
+    password: "123"
+}
+>>>
+verifypositive:                 Object moved
+verifyresponsecode:             302
+parseresponseREDIRECT:          Location: |\n|decode
+
+step:                           (redirect) Get the authenticated homepage
+desc:                           Finish authentication
+url:                            {REDIRECT}
+verifypositive:                 /account/home
+verifypositive5:                Welcome
+verifynegative:                 Error.aspx
+verifynegative5000:             System under maintenance

@@ -3,7 +3,7 @@
     "name": "WebImblaze",
     "patterns": [
         {
-            "include": "#keywords"
+            "include": "#others"
         },
         {
             "include": "#strings"
@@ -16,13 +16,9 @@
         }
     ],
     "repository": {
-        "keywords": {
-            "patterns": [
-                {
-                    "name": "keyword.control.webimblaze",
-                    "match": "\\b(step|desc|section|url)\\b"
-                }
-            ]
+        "others": {
+            "name": "parameter.informational.webimblaze",
+            "match": "(step)"
         },
         "strings": {
             "name": "string.triple.angle.webimblaze",
