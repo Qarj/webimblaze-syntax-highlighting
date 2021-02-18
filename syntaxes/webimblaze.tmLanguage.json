@@ -27,7 +27,11 @@
                 },
                 {
                     "name": "keyword.control.webimblaze",
-                    "match": "^(addheader|autoretry|checkpoint|decodequotedprintable|decodesmtp|dumpjson|errormessage|file|firstlooponly|formatjson|formatxml|getallhrefs|getallsrcs|getbackgroundimages|include|lastlooponly|logastext|logresponseasfile|maxredirect|method|posttype|postbody|readfile|readsharedvar|removecookie|restartbrowser|restartbrowseronfail|retry|runif|runon|section|setcookie|sleep|url|useragent|verifytext|writesharedvar|echo)\\b"
+                    "match": "^(addheader|autoretry|checkpoint|decodebase64|decodequotedprintable|decodesmtp|dumpjson|errormessage|file|formatjson|formatxml|getallhrefs|getallsrcs|getbackgroundimages|include|logastext|logresponseasfile|maxredirect|method|posttype|postbody|readfile|readsharedvar|removecookie|restartbrowser|restartbrowseronfail|retry|section|setcookie|sleep|url|useragent|verifytext|writesharedvar|echo)\\b"
+                },
+                {
+                    "name": "keyword.info.special.webimblaze",
+                    "match": ":\\s+Info "
                 },
                 {
                     "name": "keyword.prefix.webimblaze",
@@ -39,11 +43,11 @@
                 },
                 {
                     "name": "keyword.selenium.remote.driver.webimblaze",
-                    "match": "\\b(get_all_cookies|get_current_url|get_body_text|get_page_source|get_user_agent|find_element|send_keys|click)\\b"
+                    "match": "\\b(get_all_cookies|get_current_url|get_body_text|get_page_source|get_user_agent|find_element|send_keys)\\b"
                 },
                 {
                     "name": "invalid.illegal.warning.webimblaze",
-                    "match": "^(abort|autocontrolleronly|commandonerror|commandonfail|donotrunon|gotostep|id|ignoreautoassertions|ignoreautoretry|ignorehttpresponsecode|ignoresmartassertions)\\b"
+                    "match": "^(abort|autocontrolleronly|commandonerror|commandonfail|donotrunon|firstlooponly|gotostep|id|ignoreautoassertions|ignoreautoretry|ignorehttpresponsecode|ignoresmartassertions|lastlooponly|runif|runon)\\b"
                 },
                 {
                     "name": "storage.delimiter.webimblaze",
@@ -55,22 +59,26 @@
                 },
                 {
                     "name": "support.type.exception.webimblaze",
-                    "match": "^(assertcount|searchimage|verifypositive|verifynegative|verifyresponsecode|verifyresponsetime)[^:]*"
+                    "match": "^(assertcount|assertnear|searchimage|verifypositive|verifynegative|verifyresponsecode|verifyresponsetime)[^:]*"
                 },
                 {
-                    "name": "variable.reserved.webimblaze",
-                    "match": "\\b(ALPHA|ALPHANUMERIC|AMPERSAND|BASEURL|BASEURL1|BASEURL2|CONCURRENCY|COUNTER|CWD|DATA|DATE|DATE:::|DATETIME|DAY|DAYTEXT|ELAPSED_MINUTES|ELAPSED_SECONDS|EPOCHSECONDS|EPOCHSPLIT|FORMATDATETIME|HH|HOSTNAME|JUMPBACKS|LENGTH|LESSTHAN|MM|MONTH|MONTHTEXT|NAME|NOW|NUMERIC|OPT_PROXY|OUTPUT|RANDOM|RETRY|SINGLEQUOTE|SS|STARTTIME|TESTFILENAME|TESTNUM|TESTSTEPTIME|TIMESTAMP|WEEKOFMONTH|YEAR|YY)\\b"
+                    "name": "keyword.control.webimblaze",
+                    "match": "(ALPHA|ALPHANUMERIC|{AMPERSAND}|{BASEURL}|{BASEURL1}|{BASEURL2}|{CONCURRENCY}|{COUNTER}|{CWD}|{PUBLISH}|{DATA}|{DATE}|DATE:::|{DATETIME}|{DAY}|{DAYTEXT}|{ELAPSED_MINUTES}|{ELAPSED_SECONDS}|{EPOCHSECONDS}|{EPOCHSPLIT}|{FORMATDATETIME}|{HH}|{HOSTNAME}|{OUTPUTFOLDERNAME}|{JUMPBACKS}|{LENGTH}|{LESSTHAN}|{MM}|{MONTH}|{MONTHTEXT}|{NAME}|{NOW}|{NUMERIC}|{OPT_PROXY}|{APP_DATA}|{SYS_TEMP}|{OUTPUT}|{RANDOM:\\d+}|{RANDOM:\\d+:ALPHA}|{RANDOM:\\d+:NUMERIC}|{RETRY}|{SINGLEQUOTE}|{SLASH}|{SHELL_ESCAPE}|{SHELL_QUOTE}|{SS}|{STARTTIME}|{TESTFILENAME}|{TESTNUM}|{TESTSTEPTIME:\\d+}|{TIMESTAMP}|{WEEKOFMONTH}|{YEAR}|{YY}|\\[\\[\\[\\|[0-9a-f]+\\|\\]\\]\\]|\\$capture1|\\$capture2|\\$capture3)"
+                },
+                {
+                    "name": "support.type.substitution.modifier.webimblaze",
+                    "match": "({DATE:::[^}]+}|{DATE_NOW:::[^}]+}|{DATE_GMT_NOW:::[^}]+})"
                 },
                 {
                     "name": "variable.webimblaze",
                     "match": "^(parseresponse|parsematch|redact)[^:]*"
                 },
                 {
-                    "name": "variable.special.webimblaze",
-                    "match": "\\s(delete|put|application/json|application/soap\\+xml|application/x-www-form-urlencoded|multipart/form-data|text/xml|\\$driver|fail fast!|file=>|->get)\\b"
+                    "name": "keyword.special.webimblaze",
+                    "match": "\\s(delete|put|application/json|application/soap\\+xml|application/x-www-form-urlencoded|multipart/form-data|text/xml|\\$driver|fail fast!|file=>|->click|->get)\\b"
                 },
                 {
-                    "name": "variable.extra.special.webimblaze",
+                    "name": "keyword.extra.special.webimblaze",
                     "match": "(->get)\\b"
                 }
             ]
@@ -88,7 +96,7 @@
                     "end": "///"
                 }
             ]
-        }, 
+        },
         "block-comments": {
             "name": "comment.block.webimblaze",
             "begin": "--=",
@@ -99,7 +107,7 @@
             "match": "^\\s*(#).*$\\n?"
         },
         "variables": {
-            "name": "storage.webimblaze",
+            "name": "variable.webimblaze",
             "begin": "{",
             "end": "}"
         }
