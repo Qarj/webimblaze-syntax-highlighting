@@ -3,6 +3,7 @@
     "displayName": "WebImblaze Syntax Highlighting",
     "description": "VSCode syntax highlighting for WebImblaze .test files",
     "version": "1.0.0",
+    "publisher": "TimBuckland",
     "repository": {
         "type": "git",
         "url": "https://github.com/Qarj/webimblaze-syntax-highlighting"
