@@ -1,10 +1,10 @@
 # webimblaze-syntax-highlighting README
 
-Syntax highlighting for WebImblaze `.test` files.
+Syntax highlighting for the WebImblaze HTTP test tool `.test` files.
 
 ## Features
 
-Highlights WebImblaze keywords, comments and `<<< >>>` style multiline strings.
+Highlights WebImblaze keywords, comments, built-in substitution variable names and `<<< >>>` style multiline strings.
 
 ## Requirements
 
@@ -28,20 +28,6 @@ postbody
 
 ## Release Notes
 
-### 0.1.0
+### 1.0.0
 
-Completed first draft.
-
-# development-notes
-
-https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide
-https://code.visualstudio.com/api/get-started/your-first-extension
-https://fossies.org/linux/vscode/extensions/json/syntaxes/JSON.tmLanguage.json
-
-```
-npm install -g yo generator-code
-```
-
-```
-yo code
-```
+Initial release.
